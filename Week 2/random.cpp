@@ -14,6 +14,8 @@ int main(void){
     std::uniform_int_distribution<int> dist(1,100);
 
     for(int i = 0; i <50; i++){
+        int x = dist(eng);
+        sum += x;
 
         std:cout << dist(eng) << std::endl;
     }
