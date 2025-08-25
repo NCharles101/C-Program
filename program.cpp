@@ -3,16 +3,14 @@
 
 */
 #include <iostream>
+#include <ctime>
+#
 using namespace std;
 using std::cout;
 
 int main(void){
-    cout << "Hello World" <<std::endl;
+    srand(time(0)); 
 
-    //cout - console output (object of an iostream class)
-    //<< stream - insertion operator
-    //std - standard namespace
-    //:: - scope resolution operator
 
     return 0;
 
