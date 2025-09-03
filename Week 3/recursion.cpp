@@ -8,7 +8,11 @@ int main(void){
 }
 
 void test(int n) {
-
+    //Base Case
+    if (n<=0){
+        return;
+    }
+    //Recursive Case
     std::cout<< n << std::endl;
     test(n-1);
 }
