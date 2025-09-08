@@ -32,8 +32,9 @@ void printCombination(string& s, int n, int i){
     
     }
     while(s[i] <= 'z'){
+
         printCombination(s, n, i + 1);
         s[i]++;
     }
     s[i] = 'a';
-}
+}// 3v 
