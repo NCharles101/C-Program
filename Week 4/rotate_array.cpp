@@ -13,4 +13,18 @@ int main(void){
     for (int i : newlist){
         std::cout << i << ' ';
     }
+    return 0;
+
+}
+
+void rotateleft(const int src[], int dest[], int size, int k){
+    int start = size - (k % size);
+    int j = 0;
+    for (int i = start; i < size; i++){
+        dest[j] = src[i];
+        j++;
+    
+    }
+    for 
+
 }
