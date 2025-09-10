@@ -53,6 +53,6 @@ void rotateright(vector<int>& v, int k){
 void rotateleft(vector<int>& v, int k){
     for (int i = 1; i <=k; i++){
         v.insert(v.end(),v[1]);
-        v.erase(v.front());
+        v.erase(v.begin());
     }
 }
