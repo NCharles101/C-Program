@@ -10,7 +10,7 @@ typedef struct {
     int length;
 
     void updateLength(void){
-        length = (source.empty() || destination.empty()) ?0 : rand()% 900 + 75;
+        length = (source.empty() || destination.empty()) ? 0 : rand() % 900 + 75;
     }
 
     public:
@@ -34,11 +34,12 @@ typedef struct {
     }
 
     void print(void){
-        std::cout << source << " -> " << destination << " : " <<  updateLength << std::endl;
+        std::cout << source << " -> " << destination << " : " <<  length << std::endl;
     }
 } Route;
 
 int main(void){
+    srand(time(0));
     
     //create an object of route
     Route fall_trip;
