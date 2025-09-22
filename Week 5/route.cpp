@@ -20,10 +20,14 @@ typedef struct {
     //they have no return type, they are called when the object is created, constructors should be public, constructors cannot be code explicitely
 
     //no arguement constructor
-    Route() {
-        length = 0;
+    Route() : length(0){
     }
-    
+
+    //overloaded constructor
+    Route(std::string source_, std::string destination_){
+        setSource(source_);
+        setDestination(destination_);
+    }
     std::string getSource(void){
         return source;
     }
@@ -48,6 +52,11 @@ typedef struct {
     void print(void){
         std::cout << source << " -> " << destination << " : " <<  length << std::endl;
     }
+
+    //returns whether the route is long or not, method implementation
+    bool Route::isLong(){
+        return getLength()>300;
+    }
 } Route;
 
 int main(void){
@@ -65,5 +74,17 @@ int main(void){
     fall_trip.setDestination("New York");
     fall_trip.print();
 
+    //create a route object with constructor with arguements
+    Route christmas_trip("Orlando", "Los Angelos");
+
+    christmas_trip.print();
+
+    //creating objects
+    Route route1; // no argument constructor
+    //Route route2("A","B"); // constructor with arguments
+    Route route3 = Route(); //no argument constructor
+
+    //Route route5(); // not an object function protype
+    std::cout << route3.isLong();
     return 0;
 }
