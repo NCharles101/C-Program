@@ -1,6 +1,7 @@
 //implementation of a car class
 #include "Car.hpp"
 #include <iostream>
+using namespace std;
 //no - argument constructor
 
 Car::Car(){
