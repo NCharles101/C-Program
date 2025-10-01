@@ -36,7 +36,7 @@ public:
 
     // Methods
     void print(void) const;
-}
+
 private:
     string make;
     string model;
