@@ -8,5 +8,8 @@ class CarDealer {
 public:
     void showInventory() const;
     void addCar(const Car& car);
-}
+
 private:
+ std::vector 
+
+}
