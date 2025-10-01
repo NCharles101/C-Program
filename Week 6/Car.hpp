@@ -34,6 +34,9 @@ public:
     void setYear(int newYear);
     void setMPG(double newMPG);
 
+    // Methods
+    void print(void) const;
+
 private:
     string make;
     string model;
