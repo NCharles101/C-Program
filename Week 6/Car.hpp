@@ -9,7 +9,7 @@ add:
 
 methods:
 void refuel(double gallons);
-void drive(double distance); if car has enough fuel to drive the given distance print <car (make,model) is driving!>
+void drive(double distance); //if car has enough fuel to drive the given distance print <car (make,model) is driving!>
 
 */
 using namespace std;
