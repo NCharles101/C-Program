@@ -1,6 +1,7 @@
 // testing file 
 #include "Car.hpp"
 #include "CarDealer.hpp"
+using namespace std;
 
 int main(void) {
     //create a car object
@@ -24,6 +25,7 @@ int main(void) {
     ferrari_lakeland.addCar(ferrari_superGT);
 
     ferrari_lakeland.showInventory();
+    cout << number
     return 0;
 }
 
