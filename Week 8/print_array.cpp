@@ -40,7 +40,7 @@ int* doubleArr(int *arr, int size){
 }
 
 int* doubleArrNew(const int *arr, int size){
-    int *new_array = new int[size]; //
+    int *new_array = new int[size]; // allocates memory to the heap for future use while compiling.
     for(int i = 0; i < size; i++){
         new_array[i] = arr[i] *2;
     }
