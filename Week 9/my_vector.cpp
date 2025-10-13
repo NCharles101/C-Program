@@ -13,10 +13,12 @@ MyVector::~MyVector(){
 }
 
 MyVector::MyVector(const MyVector& other){
-    //
+    //to do #1
+    //copy vector
 }
 
 void MyVector::push_back(int value) {
+    //to do 2
     elements[size] = value;
     size++;
 }
@@ -28,3 +30,8 @@ void MyVector::print() const {
     }
     std::cout << "]" << std::endl;
 }
+/*
+todo 3 
+void pop_back(); (capacity should not be greater than double size)
+
+*/
