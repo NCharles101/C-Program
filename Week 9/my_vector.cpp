@@ -78,3 +78,9 @@ int& MyVector::at(int index){
     }
     return elements[index];
 }
+
+void push_front(int value){
+
+}
+
+void 

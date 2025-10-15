@@ -13,6 +13,7 @@ class MyVector {
         int getCapacity() const {return capacity;}
         int pop_back(void);
         int& at(int index);
+        void push_front(int value);
     private:
         int *elements;
         int size;
