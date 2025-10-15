@@ -10,7 +10,9 @@ class MyVector {
 
         void push_back(int value);
         void print() const;
-
+        int getCapacity() const {return capacity;}
+        int pop_back(void);
+        int& at(int index);
     private:
         int *elements;
         int size;

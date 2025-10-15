@@ -19,7 +19,7 @@ MyVector::MyVector(const MyVector& other){
     capacity = other.capacity;
     elements = new int[capacity];
     //copy elements
-    for(int i = 0; i < size;; i++){
+    for(int i = 0; i < size; i++){
         elements[i] = other.elements[i];
     }
 }
@@ -36,9 +36,18 @@ void MyVector::push_back(int value) {
 /*
 todo 3 
 */
-void pop_back(){
-    
-    
+int MyVector::pop_back(void){
+    if (size > 0){
+
+        if (size -1 < capacity/2){
+            allocate_memory(capacity/2);
+        }
+        return elements[--size];
+    }
+    else{
+        // throw an exception
+        throw "The vector is empty!";
+    }
 }
 
 
@@ -61,4 +70,11 @@ void MyVector::allocate_memory(int memory_size){
     }
     //deallocates old memory
     delete [] old;
+}
+
+int& MyVector::at(int index){
+    if ( index <0 || index >size-1){
+        throw "Invalid index";
+    }
+    return elements[index];
 }
