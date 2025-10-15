@@ -15,8 +15,7 @@ class MyVector {
         int *elements;
         int size;
         int capacity;
-
-
+        void allocate_memory(int memory_size);
 
 };
  #endif
