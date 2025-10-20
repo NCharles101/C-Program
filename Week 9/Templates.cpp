@@ -38,8 +38,8 @@ class Pair {
 };
 
 //create a template func that takes two arguements of any kind and returns a pair of those arguements
-template<typename T3>
-Pair<T1, T2> createPair (const T& p1, const T& p2);
+template<typename T3, typename T4>
+Pair<T1, T2> createPair(const T1& f, const T2& g);
 
 
 
@@ -105,5 +105,7 @@ T findMax(std::vector<T>& v){
 
 template<typename T3, typename T4>
 Pair<T1, T2> createPair(const T1& f, const T2& g){
+
+    
 
 }
