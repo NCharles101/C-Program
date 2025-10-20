@@ -1,21 +1,28 @@
 #ifndef MYVECTOR_HPP
 #define MYVECTOR_HPP
 
+
+
+template <typename T>
 class MyVector {
 
     public:
         MyVector(int capacity = 1);
         ~MyVector();
-        MyVector(const MyVector& other);
+        MyVector(const MyVector<T>& other);
 
-        void push_back(int value);
+        void push_back(const T& value);
         void print() const;
         int getCapacity() const {return capacity;}
-        int pop_back(void);
-        int& at(int index);
-        void push_front(int value);
+        T pop_back(void);
+        T& at(int index);
+        void push_front(const T& value);
+
+        
+
+        
     private:
-        int *elements;
+        T *elements;
         int size;
         int capacity;
         void allocate_memory(int memory_size);
