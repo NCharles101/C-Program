@@ -3,6 +3,7 @@
 #define POINT_H
 #include <string>
 
+
 class point{
     public:
         point(int x = 0, int y = 0, const char *tag = nullptr);
@@ -24,13 +25,13 @@ class point{
 
         
         // augmented arithmetic operator
-        /* not working
-        point& operator+=(const point& other) const;
+        
+        point& operator+=(const point& other);
 
-        point& operator-=(const point& other) const;
+        point& operator-=(const point& other);
 
-        point& operator*=(const point& other) const;
-        */
+        point& operator*=(const point& other);
+        
 
         std::string toString(void) const;
 
@@ -44,7 +45,11 @@ class point{
         //script operator
         int& operator[](int index);
 
+        //assignment operator
+        void operator=(const point& other);
 
+        //friend funcs have access to all the private properties of the class
+        friend int sum_cooridinates();
 
     private:
     int x;
@@ -52,5 +57,6 @@ class point{
     char *tag;
 };
 
+std::ostream operator<<(std::ostream& out, point& point);
 
 #endif
