@@ -1,4 +1,5 @@
 #include "point.hpp"
+#include <cstring>
 
 
 
@@ -38,7 +39,7 @@ bool point::operator==(const point& other) const{
     return (x == other.x && y == other.y);
 }
 
-bool operator!=(const point& other) const{
+bool point::operator!=(const point& other) const{
     return !(*this == other);
 }
 
@@ -55,7 +56,7 @@ point point::operator*(const point& other) const{
 point point::operator-(const point& other) const{
     return point(x - other.x, y - other.y);
 }
-/*
+
 point& point::operator+=(const point& other) {
     *this = *this + other;
     return *this;
@@ -70,7 +71,7 @@ point& point::operator*=(const point& other) {
     *this = *this * other;
     return *this;
 }
-*/
+
 std::string point::toString(void) const {
     return "(" + std::to_string(x) + "," + std::to_string(y) + ")";
 }
@@ -96,4 +97,23 @@ point point::operator++(int ) {
 
 int& point::operator[](int index){
     return (index == 0 ) ? x : y ;
+}
+
+void point::operator=(const point& other){
+            x = other.x;
+            y = other.y;
+            if (tag){
+                delete [] tag;
+            }
+            if  (other.tag){
+                int size = strlen(other.tag);
+                tag = new char[size + 1];
+                strcpy(tag, other.tag);
+            }
+}        
+
+std::ostream& operator<<(std::ostream& out, point& point){
+    
+//test << operator
+std::cout << p3.to_string
 }

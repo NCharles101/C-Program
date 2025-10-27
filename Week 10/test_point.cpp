@@ -1,8 +1,12 @@
 #include <iostream>
 #include "point.hpp"
 
+int sum_cooridinates(){
+    point p(3,5,"p");
+    return p.x + p.y;
+}
 int main(void) {
-    point p1(3,4);
+    point p1(3,4, "p1");
     std::cout << p1.toString() << std::endl;
 
     point p2 = -p1;
