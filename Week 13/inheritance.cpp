@@ -65,17 +65,17 @@ class Player {
     }
 };
 int main(void) {
-Gun gun;
-MachineGun mg;
-Bazooka bazooka;
-Knife knife;
-gun.use();
-//mg.shoot();
-// Create a reference to a base class
-Gun& weapon = mg;
-weapon.use();
-std::cout << "-------------------\n";
-Player player;
-player.use_weapon(knife);
-return 0;
+    Gun gun;
+    MachineGun mg;
+    Bazooka bazooka;
+    Knife knife;
+    gun.use();
+    //mg.shoot();
+    // Create a reference to a base class
+    Gun& weapon = mg;
+    weapon.use();
+    std::cout << "-------------------\n";
+    Player player;
+    player.use_weapon(knife);
+    return 0;
 }

@@ -14,7 +14,7 @@ class Character {
 
 
 
-class Elf : virtual public Character{
+class Elf : virtual public Character{ //virtual inheritence solves diamond problem
     public:
         Elf() {
             std::cout << " I am an Elf \n";
