@@ -1,5 +1,19 @@
 #include <iostream>
+#include <stdexcept>
 
+class big_value : public std::logic_error{
+    public:
+        big_value(int code = 1, std::string msg= "error!"): exp_code(code), exp_msg(msg), std::logic_error(msg){
+
+        }
+
+        std::string what() {
+            return "error code: " + std::to_string(exp_code) + ". " + exp_msg;
+        }
+    private:
+        int exp_code;
+        std::string exp_msg;
+};
 
 class Fraction {
     public:
@@ -15,7 +29,14 @@ class Fraction {
                 std::string ex("Error: the numerator is too small");
                 throw ex;
             }
+            if (num > 100){
+                throw big_value(100,"Numerator cannot be greater than 100");
+            }
             if (num/denom < 0){
+                throw std::logic_error("Cannot handle negative fractions");
+                
+            }
+            if ((num < 0 && denom > 0) || (num > 0 && denom < 0)){
                 throw 777;
             }
             return num / denom;
@@ -47,6 +68,9 @@ int main(void){
     }
     catch (int code) {
         std::cout << "Exception code is "<< code << std::endl;
+    }
+    catch (const std::exception& ex){
+        std::cout << ex.what() << std::endl;
     }
     catch (...) { //catches anything
         std::cout << "Other type of exception" << std::endl;
