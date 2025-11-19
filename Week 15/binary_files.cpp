@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
 
         file_in.close();
 
-
+        std::cout << v2 << std::endl;
 
 
 
