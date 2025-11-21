@@ -1,21 +1,25 @@
-#ifndef MATRIX_HPP
-#define MATRIX_HPP
+#ifndef MATRIX_H
+#define MATRIX_H
 
+template <typename T>
 class Matrix {
 
     public:
-        Matrix(int rows, int cols);
+        Matrix(int rows = 1, int cols = 1);
 
-        ~Matrix();
+        virtual ~Matrix();
 
-        Matrix(const Matrix& other);
+        Matrix (const Matrix<T>& other);
         
-        Matrix& operator=(const Matrix& other);
+        Matrix& operator=(const Matrix<T>& other);
 
         void print() const;
+        Matrix<T> load(const char *filename) ;
 
-    private:
+    protected:
         int rows, cols;
-        int **data;
+        <T> **data;
 
 };
+
+#endif
